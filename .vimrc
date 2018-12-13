@@ -73,8 +73,9 @@ function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
 endfunction
 
 call NERDTreeHighlightFile('vue', 'green', 'none', 'green', '#151515')
-call NERDTreeHighlightFile('json', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('html', 'blue', 'none', 'blue', '#151515')
+call NERDTreeHighlightFile('ts', 'blue', 'none', 'blue', '#151515')
+call NERDTreeHighlightFile('json', 'red', 'none', 'red', '#151515')
+call NERDTreeHighlightFile('html', 'grey', 'none', 'grey', '#151515')
 call NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', '#151515')
 call NERDTreeHighlightFile('js', 'yellow', 'none', 'yellow', '#151515')
 call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
@@ -96,7 +97,6 @@ inoremap [ []<left>
 inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
-
 
 set splitbelow
 set splitright

@@ -58,7 +58,6 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'Raimondi/delimitMate'
-Plugin 'sheerun/vim-polyglot'
 call vundle#end()
 filetype plugin indent on
 

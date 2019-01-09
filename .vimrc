@@ -11,7 +11,13 @@ syntax enable
 filetype plugin indent on
 
 " color theme
-colorscheme spacegray
+if (has("termguicolors"))
+  set termguicolors
+endif
+let g:oceanic_next_terminal_bold = 1
+let g:oceanic_next_terminal_italic = 1
+let g:airline_theme='oceanicnext'
+colorscheme OceanicNext
 
 " feature
 autocmd FileType php setlocal shiftwidth=4 tabstop=4
@@ -58,6 +64,8 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'Raimondi/delimitMate'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'airblade/vim-gitgutter'
 call vundle#end()
 filetype plugin indent on
 

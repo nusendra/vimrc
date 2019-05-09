@@ -23,7 +23,12 @@ colorscheme OceanicNext
 autocmd FileType php setlocal shiftwidth=4 tabstop=4
 " autocmd vimenter * NERDTree
 autocmd FileType vue syntax sync fromstart
+" for .svelte
+autocmd FileType html setlocal sw=2 sts=2
+autocmd BufRead,BufNewFile *.svelte setlocal ft=html
+" for .vue
 autocmd BufNewFile,BufRead *.vue set ft=vue
+" for .ts
 autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
 autocmd QuickFixCmdPost *grep* cwindow
 set runtimepath^=~/.vim/bundle/ctrlp.vim

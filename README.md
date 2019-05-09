@@ -8,6 +8,7 @@
 - .js
 - .vue
 - .ts
+- .svelte
 
 # Control
 - Ctrl + B to open NerdTree

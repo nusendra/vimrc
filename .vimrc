@@ -105,8 +105,8 @@ nnoremap <c-p> :GFiles<cr>
 
 " Window Tab
 nnoremap <C-N> :tabnew<cr>
-nnoremap <C-Left> :tabprevious<CR>
-nnoremap <C-Right> :tabnext<CR>
+nnoremap <C-Up> :tabprevious<CR>
+nnoremap <C-Down> :tabnext<CR>
 
 " syntastic
 let g:syntastic_always_populate_loc_list=1

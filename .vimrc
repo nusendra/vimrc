@@ -23,12 +23,9 @@ colorscheme OceanicNext
 autocmd FileType php setlocal shiftwidth=4 tabstop=4
 " autocmd vimenter * NERDTree
 autocmd FileType vue syntax sync fromstart
-" for .svelte
 autocmd FileType html setlocal sw=2 sts=2
 autocmd BufRead,BufNewFile *.svelte setlocal ft=html
-" for .vue
 autocmd BufNewFile,BufRead *.vue set ft=vue
-" for .ts
 autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
 autocmd QuickFixCmdPost *grep* cwindow
 set runtimepath^=~/.vim/bundle/ctrlp.vim
@@ -72,7 +69,13 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
+
+" vim code formatter
+Plugin 'google/vim-maktaba'
+Plugin 'google/vim-codefmt'
+Plugin 'google/vim-glaive'
 call vundle#end()
+call glaive#Install()
 filetype plugin indent on
 
 " Map NerdTree
@@ -100,6 +103,11 @@ nnoremap <C-H> <C-W><C-H>
 " FZF exclude files based on .gitignore
 nnoremap <c-p> :GFiles<cr>
 
+" Window Tab
+nnoremap <C-N> :tabnew<cr>
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
+
 " syntastic
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_error_symbol='✗'
@@ -108,6 +116,20 @@ let g:syntastic_style_error_symbol = '✗'
 let g:syntastic_style_warning_symbol = '⚠'
 let g:syntastic_auto_loc_list=1
 let g:syntastic_aggregate_errors = 1
+
+" Autoformatting using codefmt
+augroup autoformat_settings
+  autocmd FileType bzl AutoFormatBuffer buildifier
+  autocmd FileType c,cpp,proto,javascript AutoFormatBuffer clang-format
+  autocmd FileType dart AutoFormatBuffer dartfmt
+  autocmd FileType go AutoFormatBuffer gofmt
+  autocmd FileType gn AutoFormatBuffer gn
+  autocmd FileType html,css,sass,scss,less,json AutoFormatBuffer js-beautify
+  autocmd FileType java AutoFormatBuffer google-java-format
+  autocmd FileType python AutoFormatBuffer yapf
+  " Alternative: autocmd FileType python AutoFormatBuffer autopep8
+  autocmd FileType vue AutoFormatBuffer prettier
+augroup END
 
 set splitbelow
 set splitright

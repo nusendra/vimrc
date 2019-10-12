@@ -6,6 +6,7 @@ set number
 set autoindent
 set hlsearch
 set background=dark
+set backspace=indent,eol,start
 
 syntax enable
 filetype plugin indent on

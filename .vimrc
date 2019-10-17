@@ -70,6 +70,7 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plugin 'jiangmiao/auto-pairs'
 
 " vim code formatter
 Plugin 'google/vim-maktaba'

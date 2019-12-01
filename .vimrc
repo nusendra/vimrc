@@ -17,8 +17,8 @@ if (has("termguicolors"))
 endif
 let g:oceanic_next_terminal_bold = 1
 let g:oceanic_next_terminal_italic = 1
-let g:airline_theme='oceanicnext'
-colorscheme OceanicNext
+let g:airline_theme='solarized'
+colorscheme apprentice
 
 " feature
 autocmd FileType php setlocal shiftwidth=4 tabstop=4
@@ -31,6 +31,7 @@ autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
 autocmd QuickFixCmdPost *grep* cwindow
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html Prettier
 
 "ale
 let b:ale_fixers = ['prettier', 'eslint']
@@ -107,8 +108,8 @@ nnoremap <c-p> :GFiles<cr>
 
 " Window Tab
 nnoremap <C-N> :tabnew<cr>
-nnoremap <C-Up> :tabprevious<CR>
-nnoremap <C-Down> :tabnext<CR>
+nnoremap <C-Y> :tabprevious<CR>
+nnoremap <C-U> :tabnext<CR>
 
 " syntastic
 let g:syntastic_always_populate_loc_list=1

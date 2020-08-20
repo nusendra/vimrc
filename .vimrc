@@ -61,15 +61,15 @@ Plugin 'tpope/vim-commentary'
 Plugin 'wakatime/vim-wakatime'
 Plugin 'w0rp/ale'
 Plugin 'junegunn/fzf.vim'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'Yggdroot/indentLine'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'bronson/vim-trailing-whitespace'
-Plugin 'Raimondi/delimitMate'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'evanleck/vim-svelte'
+Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 
 call vundle#end()
 filetype plugin indent on
@@ -119,6 +119,9 @@ autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.gra
 
 let g:prettier#config#bracket_spacing = 'true'
 
+" svelte
+let g:svelte_indent_script = 0
+let g:svelte_indent_style = 0
 
 set splitbelow
 set splitright

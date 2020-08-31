@@ -70,6 +70,7 @@ Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'evanleck/vim-svelte'
 Plugin 'neoclide/coc.nvim', {'branch': 'release'}
+Plugin 'sheerun/vim-polyglot'
 
 call vundle#end()
 filetype plugin indent on

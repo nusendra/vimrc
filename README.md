@@ -17,3 +17,6 @@
 - Ctrl + H to move left window split
 - Ctrl + L to move right window split
 - Automatically add close bracket
+
+# Install COC Extensions
+:CocInstall coc-tsserver coc-json coc-svelte coc-css coc-vetur

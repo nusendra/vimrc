@@ -33,6 +33,9 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 "ale
 let b:ale_fixers = ['prettier', 'eslint']
+let g:ale_linter_aliases = {'svelte': ['css', 'javascript']}
+let g:ale_linters = {'svelte': ['stylelint', 'eslint']}
+let g:ale_fixers = {'svelte': ['eslint', 'prettier', 'prettier_standard']}
 
 " custom
 let mapleader = ","
@@ -59,7 +62,7 @@ Plugin 'gorodinskiy/vim-coloresque'
 Plugin 'prettier/vim-prettier'
 Plugin 'tpope/vim-commentary'
 Plugin 'wakatime/vim-wakatime'
-Plugin 'w0rp/ale'
+Plugin 'dense-analysis/ale'
 Plugin 'junegunn/fzf.vim'
 Plugin 'Yggdroot/indentLine'
 Plugin 'leafgarland/typescript-vim'
@@ -68,9 +71,9 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'evanleck/vim-svelte'
 Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 Plugin 'sheerun/vim-polyglot'
+Plugin 'mhinz/vim-startify'
 
 call vundle#end()
 filetype plugin indent on
@@ -120,9 +123,34 @@ autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.gra
 
 let g:prettier#config#bracket_spacing = 'true'
 
-" svelte
-let g:svelte_indent_script = 0
-let g:svelte_indent_style = 0
+let g:startify_custom_header = [
+      \ '                        ~~                             ',
+      \ '                       |@@=                            ',
+      \ '                      j@@@@}                           ',
+      \ '                    `K@@^^@@k`                         ',
+      \ '                   .N@Q,  ~Q@N.                        ',
+      \ '                  ~Q@%.    .N@Q_                       ',
+      \ '  `.             <@@h       `X@@^             .`       ',
+      \ '   }#y^`        z@@z          f@@7        `ryBu        ',
+      \ '    |@@@&y^`   U@@+            =@@S   `+5Q@@@=         ',
+      \ '     ~@@@Q@@QyW@Q:              ~Q@gaQ@@Q@@Q~          ',
+      \ '      ,Q@Q~=R@@@Qj^`          `^yQ@@@D=;Q@Q.           ',
+      \ '       `R@Q7@@K=aQ@@By^`  `^5B@@Qa+b@@7@@K`            ',
+      \ '         o@@@n    .=oQ@@QQ@@Bo^`    5@@@y              ',
+      \ '         o@@@Y    .+oQ@@QQ@@Bo^`    5@@@y              ',
+      \ '       `D@@z@@6^yB@@Qa=.  .=mQ@@Ny^q@@z@@6`            ',
+      \ '      .Q@Q~^D@@@Qo+`          .+ZQ@@@D^;Q@B.           ',
+      \ '     ~@@@Q@@QyW@Q:              ~Q@gaQ@@Q@@Q~          ',
+      \ '    *@@@QS=.  `q@@^            r@@P   .<mQ@@@^         ',
+      \ '   YQa+.        s@@T          I@@J        .>ZQt        ',
+      \ '  `.             <@@h       `X@@^             .`       ',
+      \ '                  ~Q@%.    .N@Q_                       ',
+      \ '                   .B@Q.  ,Q@#.                        ',
+      \ '                    `d@@;!@@U`                         ',
+      \ '                      j@@@@}                           ',
+      \ '                       i@@*                            ',
+      \ '                        ;;                             ',
+        \ ]
 
 set splitbelow
 set splitright

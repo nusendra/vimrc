@@ -74,6 +74,7 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 Plugin 'sheerun/vim-polyglot'
 Plugin 'mhinz/vim-startify'
+Plugin 'hugolgst/vimsence'
 
 call vundle#end()
 filetype plugin indent on

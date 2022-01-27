@@ -34,6 +34,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'github/copilot.vim'
 call plug#end()
 
 " colorscheme
@@ -76,3 +77,6 @@ nnoremap <c-p> :GFiles<cr>
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html Prettier
 let g:prettier#config#bracket_spacing = 'true'
+    
+" disable continuation of comment    
+:set formatoptions-=cro
